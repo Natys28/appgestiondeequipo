@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Equipos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Equipos Tecnológicos</h1>
+    </header>
+    <nav>
+        <button onclick="mostrarSeccion('escanear')">📷 Escanear</button>
+        <button onclick="mostrarSeccion('manual')">✍️ Ingreso Manual</button>
+        <button onclick="mostrarSeccion('historial')">📜 Historial</button>
+    </nav>
+    
+    <main>
+        <section id="escanear" class="seccion">
+            <h2>Escanear Código</h2>
+            <button onclick="escanearCodigo()">Iniciar Escaneo</button>
+        </section>
+
+        <section id="manual" class="seccion">
+            <h2>Ingreso Manual</h2>
+            <form id="formulario">
+                <input type="text" placeholder="Nombre del empleado" required>
+                <input type="text" placeholder="Cédula" required>
+                <input type="text" placeholder="Número de teléfono" required>
+                <input type="text" placeholder="IMEI del equipo" required>
+                <input type="text" placeholder="Estado del equipo" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+
+        <section id="historial" class="seccion">
+            <h2>Historial de Actas</h2>
+            <ul id="lista-actas"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
